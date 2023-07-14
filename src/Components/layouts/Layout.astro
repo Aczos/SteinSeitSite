@@ -1,0 +1,62 @@
+---
+export interface Props {
+	title: string;
+}
+import {Nav} from '../Nav/Nav'
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description">
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="font-Dosis" >
+		<Nav />
+		<slot />
+	</body>
+</html>
+<style is:global>
+	@font-face {
+  font-family: 'Anton';
+  src: url('/fonts/Anton-Regular.ttf') format('ttf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Dosis';
+  src: url('/fonts/Dosis-VariableFont_wght.ttf') format('ttf');
+  font-weight: normal;
+}
+.mobile_nav_animation {
+    animation: slideInFromLeft 0.5s forwards;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .mobile_nav_exit_animation {
+    animation: slideOutToLeft 0.5s forwards;
+  }
+  
+  @keyframes slideOutToLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+
+</style>
