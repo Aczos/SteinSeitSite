@@ -9,12 +9,16 @@ export const Footer = () => {
 
 
 
-   <div className="bg-primeryColor  sm:w-1/2   lg:w-1/2 w-[1053px] h-[499px] m-auto ">
-    <h4 className="font-bold text-[64px] text-center">KONTAKT</h4>
+   <div className="flex flex-col bg-primeryColor rounded-b-lg max-sm:w-[350px] sm:w-2/3   md:w-1/2 w-[1053px] h-2/3 m-auto ">
+    <h6 className="font-bold text-[64px] text-center ">KONTAKT</h6>
        <InputCard label={'Name'}></InputCard>
        <InputCard label={'Email addres'}></InputCard>
        <InputCard label={'Phone number'}></InputCard>
        <TextAreaCard label={'message'}></TextAreaCard>
+
+       <button className="bg-black max-sm:m-auto sm:m-auto  w-[214px] h-[41px] rounded-md  text-white">
+        <span className="m-auto text-[24px] uppercase ">send</span>
+        </button>
    </div>
 
 
